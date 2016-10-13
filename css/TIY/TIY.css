@@ -59,9 +59,11 @@
 .result-iframe-horizontal {
     width: 600px;
     margin-left: 16px;
+    margin-top:0px;
 }
 
 .result-iframe-verticle {
     width: 1198px;
     margin-left: 0px;
+    margin-top:16px;
 }

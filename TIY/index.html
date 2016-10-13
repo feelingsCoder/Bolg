@@ -20,6 +20,7 @@
 
             /* 设置透明度 */
             /* opacity:0.4; */
+            
         } 
     </style>
 </head>
@@ -79,7 +80,7 @@
     </header>
     <div class="banner">
         <div class="xxx">
-            <h1 id="title" class="title">田永先华丽丽的个人简历</h1>
+            <h1 id="title" class="title">前端在线测试程序</h1>
             <p class="subheading">阳光帅气的少年，怀着对编程的强烈兴趣，向我们展示自己的个人履历。</p>
             <a class="toplink" href="../about.html">查看详情</a>
         </div>
@@ -88,7 +89,7 @@
     <div id="editor-box" class="editor-box">
         <button id="horizontal" class="editor-button fl" type="button" onclick="horizontal_Click()">水平布局</button>
         <button id="verticle" class="editor-button fl" type="button" onclick="verticle_Click()">垂直布局</button>
-        <button id="run" onclick="run_Click()" class="editor-button" type="button">运行</button>
+        <button id="run" onclick="run_Click()" class="editor-button" type="button" accesskey="s">运行</button>
         <div class="editor-box">
             <textarea id="text" class="editor editor-horizontal fl" spellcheck="false">
 &lt;!DOCTYPE html&gt;
@@ -99,11 +100,23 @@
             margin:0;
             padding:0;
         }
+        h1{
+            margin: 10px;
+            font-size: 22px;
+        }
+        p{
+            margin: 20px;
+            font-size:16px;
+            text-indent:2em;
+        }
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
+    &lt;h1&gt;
+        欢迎使用在线测试程序
+    &lt;/h1&gt;
     &lt;p&gt;
-        Hello world!
+        这是一款开源免费的在线测试程序。我们真诚的邀请您在使用的同时留下您宝贵的意见跟建议。你的支持就是我们前进的无限动力。
     &lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</textarea>
