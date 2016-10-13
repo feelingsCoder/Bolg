@@ -1,0 +1,133 @@
+﻿a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    min-width: 1200px;
+    height: 80px;
+    color: white;
+    position: relative;
+    background-color: black;
+}
+
+nav {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+nav:hover + .linkbox {
+    /*display: block;*/
+    visibility: visible;
+}
+
+.logo {
+    z-index: 2;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.toplist {
+    padding-top: 25px;
+    padding-left: 40px;
+    margin-left: 180px;
+    height: 55px;
+    text-align: center;
+}
+
+.toplinks {
+    width: 140px;
+    
+    font-size: 17px;
+}
+
+.linkbox {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    height: 180px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.linkbox:hover {
+    visibility: visible;
+}
+
+.linkset {
+    border-bottom-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.linklist {
+    padding-left: 0;
+    width: 140px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.linklist:first-child {
+    margin-left: 360px;
+}
+
+.linklist li {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.banner {
+    width: 100%;
+    min-width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url(../image/banner.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.xxx {
+    padding-top: 100px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #17e8cd;
+    text-shadow: 3px 3px 5px #000000;
+    font-size: 45px;
+}
+
+.subheading {
+    font-weight: 100;
+    font-size: 17px;
+    width: 480px;
+    color: white;
+    line-height: 150%;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+.toplink {
+    margin-top: 50px;
+    display: block;
+    width: 120px;
+    height: 27px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #051f27;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #17e8cd;
+    color: #17e8cd;
+}
+
+.toplink:hover {
+    background-color: #041122;
+    color: #20eadd;
+}

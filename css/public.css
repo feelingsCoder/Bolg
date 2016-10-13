@@ -1,0 +1,75 @@
+﻿/* 字体样式 */
+
+/*等宽英文*/
+@font-face {
+    font-family: 'TT';
+    src: url('../font/MRIAMC.TTF') format('truetype');
+}
+/* 微软雅黑 */
+@font-face {
+    font-family: 'YaHei';
+    src: url('../font/MSYH.TTF') format('truetype');
+}
+/* 微软雅黑粗体 */
+@font-face {
+    font-family: 'YaHeiBold';
+    src: url('../font/MSYHBD.TTF') format('truetype');
+}
+/* 仿宋 */
+@font-face {
+    font-family: 'FangSong';
+    src: url('../font/SIMFANG.TTF') format('truetype');
+}
+/* 幼圆 */
+@font-face {
+    font-family: 'YouYuan';
+    src: url('../font/SIMYOU.TTF') format('truetype');
+}
+/* 华文彩云 */
+@font-face {
+    font-family: 'CaiYun';
+    src: url('../font/STCAIYUN.TTF') format('truetype');
+}
+/* 华文行楷 */
+@font-face {
+    font-family: 'XingKai';
+    src: url('../font/STXINGKA.TTF') format('truetype');
+}
+
+/* 修改标签默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: YouYuan;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* 预定于公共类 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.logo {
+    width: 230px;
+    height: 130px;
+    background-position: 0 -166px;
+    background-image: url('../image/public-spr.png');
+}

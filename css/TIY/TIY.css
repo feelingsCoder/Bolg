@@ -1,0 +1,67 @@
+﻿.editor-box {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.editor-button {
+    width: 150px;
+    height: 40px;
+    font-family: YaHei;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #17e8cd;
+}
+
+.editor-button:focus {
+    outline: none;
+}
+
+.editor-button:hover {
+    background-color: #138379;
+    cursor: pointer;
+}
+
+.editor {
+    border: 1px solid #138379;
+    line-height: 26px;
+    font-size: 20px;
+    font-family: tt;
+    padding: 10px;
+    height: 480px;
+    max-height: 480px;
+}
+
+.editor-horizontal {
+    width: 560px;
+    max-width: 560px;
+}
+
+.editor-verticle {
+    width: 1178px;
+    max-width: 1178px;
+}
+
+.editor:focus {
+    outline: none;
+    border-color: #17e8cd;
+}
+
+.result-iframe {
+    border: 1px solid #17e8cd;
+    height: 500px;
+}
+
+.result-iframe-horizontal {
+    width: 600px;
+    margin-left: 16px;
+}
+
+.result-iframe-verticle {
+    width: 1198px;
+    margin-left: 0px;
+}

@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>田永先—华丽丽的个人简历</title>
+	<meta charset="utf-8" />
+	<style>
+		* {
+			font-family: '黑体';
+			margin: 0;
+			padding: 0;
+		}
+		
+		a {
+			color: white;
+			text-decoration: none;
+		}
+		
+		li {
+			list-style: none;
+		}
+		
+		.fl {
+			float: left;
+		}
+		
+		.fr {
+			float: right;
+		}
+		
+		header {
+			width: 100%;
+			height: 80px;
+			color: white;
+			position: relative;
+			background-color: black;
+		}
+		
+		nav {
+			width: 1200px;
+			height: 80px;
+			margin: 0 auto;
+		}
+		
+		nav:hover + .linkbox {
+			/*display: block;*/
+			visibility: visible;
+		}
+		
+		table {
+			border-collapse: collapse;
+			width: 500px;
+			background-color: white;
+		}
+		
+		th,
+		td {
+			height: 25px;
+		}
+		
+		th {
+			width: 80px;
+			text-align: right;
+			padding-right: 10px;
+		}
+		
+		tr:nth-child(2n+1) {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+		
+		tr:nth-child(2n) {
+			background-color: rgba(0, 0, 0, 0.03);
+		}
+		
+		.logo {
+			z-index: 2;
+			position: absolute;
+			/**341,238*/
+			width: 230px;
+			height: 130px;
+			margin-top: 10px;
+			background-position: 0 -166px;
+			background-image: url('../image/public-spr.png');
+		}
+		
+		.toplist {
+			padding-top: 25px;
+			padding-left: 40px;
+			margin-left: 180px;
+			height: 55px;
+			text-align: center;
+		}
+		
+		.toplinks {
+			width: 140px;
+			font-family: '黑体';
+			font-size: 17px;
+		}
+		
+		.linkbox {
+			position: absolute;
+			z-index: 1;
+			visibility: hidden;
+			height: 180px;
+			padding-bottom: 30px;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+		
+		.linkbox:hover {
+			visibility: visible;
+		}
+		
+		.linkset {
+			border-bottom-color: transparent;
+			padding-top: 20px;
+			padding-bottom: 30px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.linklist {
+			padding-left: 0;
+			width: 140px;
+			font-size: 17px;
+			text-align: center;
+		}
+		
+		.linklist:first-child {
+			margin-left: 360px;
+		}
+		
+		.linklist li {
+			margin-top: 10px;
+			font-size: 15px;
+		}
+		
+		.banner {
+			width: 100%;
+			height: 400px;
+			margin: 0 auto;
+			background-image: url(../image/banner.jpg);
+			background-repeat: no-repeat;
+			background-position-x: center;
+		}
+		
+		.xxx {
+			padding-top: 100px;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.title {
+			color: #17e8cd;
+			text-shadow: 3px 3px 5px #000000;
+			font-family: '黑体';
+			font-size: 45px;
+		}
+		
+		.subheading {
+			font-family: '黑体';
+			font-weight: 100;
+			font-size: 17px;
+			width: 480px;
+			color: white;
+			line-height: 150%;
+			margin-top: 10px;
+			margin-left: 3px;
+		}
+		
+		.toplink {
+			margin-top: 50px;
+			display: block;
+			width: 120px;
+			height: 27px;
+			text-align: center;
+			padding-top: 10px;
+			background-color: #051f27;
+			border-style: solid;
+			border-width: 3px;
+			border-color: #17e8cd;
+			color: #17e8cd;
+		}
+		
+		.toplink:hover {
+			background-color: #041122;
+			color: #20eadd;
+		}
+		/**简历*/
+		
+		.resume {
+			width: 900px;
+			margin: 0 auto;
+			border-left: solid 15px #0070c0;
+			border-top: solid 1px #CCCCCC;
+			box-shadow: 5px 5px 2px #888888;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			padding-right: 50px;
+		}
+		
+		.page {
+			border-left: solid 5px #0070c0;
+			margin-left: 10px;
+		}
+		
+		.myname {
+			font-size: 40px;
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+			margin-right: 80px;
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+		
+		.personalinfo {
+			height: 80px;
+			padding-top: 50px;
+		}
+		
+		.photo {
+			position: relative;
+			top: -80px;
+		}
+		
+		.classify {
+			border-bottom: solid 4px #0070c0;
+			font-size: 24px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+		}
+		
+		.classify + .content {
+			margin-top: 15px;
+		}
+		
+		.intension {
+			margin-left: 20px;
+		}
+		
+		.content {
+			margin-left: 40px;
+			margin-top: 10px;
+		}
+		
+		.time {
+			font-weight: bold;
+		}
+		
+		.school {
+			margin-left: 50px;
+			font-weight: bold;
+		}
+		
+		.specialty {
+			margin-left: 4em;
+			font-weight: bold;
+		}
+		
+		.adress {
+			margin-left: 50px;
+			font-weight: bold;
+		}
+		
+		.job {
+			margin-left: 50px;
+			font-weight: bold;
+		}
+		
+		.list {
+			margin-left: 1em;
+		}
+		
+		.child-list {
+			position: relative;
+			top: -18px;
+			margin-left: 6em;
+			font-weight: normal;
+		}
+		
+		.parent-list {
+			font-weight: bold;
+		}
+		
+		.parent-list-title {
+			font-size: 16px;
+			width: 5em;
+			text-align: right;
+		}
+		
+		.parent-list:first-child {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1 class="logo"></h1>
+			<ul class="toplist">
+				<li class="toplinks fl"><a href="index.html">官网首页</a></li>
+				<li class="toplinks fl"><a href="#">游戏资料</a></li>
+				<li class="toplinks fl">商城/合作</li>
+				<li class="toplinks fl">用户互动</li>
+				<li class="toplinks fl">赛事中心</li>
+				<li class="toplinks fl">自助服务</li>
+				<li class="toplinks fl">个人中心</li>
+			</ul>
+		</nav>
+		<div class="linkbox">
+			<div class="linkset">
+				<ul class="linklist fl">
+					<li>新手指引</li>
+					<li>资料库</li>
+					<li>攻略中心</li>
+					<li>模式实验室</li>
+					<li>海克斯战利品库</li>
+				</ul>
+				<ul class="linklist fl">
+					<li>点券充值</li>
+					<li>道聚城</li>
+					<li>LOL信用卡</li>
+					<li>网吧特权</li>
+				</ul>
+				<ul class="linklist fl">
+					<li>在线客服</li>
+					<li>活动中心</li>
+					<li>官方论坛</li>
+					<li>官方微信</li>
+					<li>官方微博</li>
+				</ul>
+				<ul class="linklist fl">
+					<li>LPL职业联赛</li>
+					<li>甲级职业联赛</li>
+					<li>德玛西亚杯</li>
+					<li>城市英雄争霸赛</li>
+					<li>高校联赛</li>
+					<li>王者峡谷</li>
+				</ul>
+				<ul class="linklist fl">
+					<li>封号查询</li>
+					<li>体验服申请</li>
+					<li>服务器状态查询</li>
+					<li>裁决之镰</li>
+				</ul>
+				<ul class="linklist fl">
+					<li>个人资料</li>
+					<li>我的英雄与皮肤</li>
+					<li>战绩历史</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="banner">
+		<div class="xxx">
+			<h1 id="title" class="title">田永先华丽丽的个人简历</h1>
+			<p class="subheading">阳光帅气的少年，怀着对编程的强烈兴趣，向我们展示自己的个人履历。</p>
+			<a class="toplink" href="about.html">查看详情</a>
+		</div>
+	</div>
+
+	<div class="resume">
+		<div class="page">
+			<div class="personalinfo">
+				<p class="myname fl">田永先</p>
+				<table>
+					<tbody>
+						<tr>
+							<th>籍贯</th>
+							<td>山东潍坊</td>
+							<th>学历</th>
+							<td>本科</td>
+						</tr>
+						<tr>
+							<th>手机</th>
+							<td>18363995052</td>
+							<th>邮箱</th>
+							<td>15263647272@163.com</td>
+						</tr>
+						<tr>
+							<th>联系地址</th>
+							<td colspan="3">山东省潍坊市寿光市田柳镇阳光小区88号楼101室</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<img class="photo fr" src="../image/photo.jpg" />
+			<h2 class="classify" style="width:720px;">求职意向:<span class="intension">CEO</span></h2>
+			<h2 class="classify">教育背景:</h2>
+			<p class="content">
+				<span class="time">2010.9 —— 2013.6</span>
+				<span class="school">寿光市第二中学</span>
+				<span class="specialty">理科</span>
+			</p>
+			<p class="content">
+				<span class="time">2013.9 —— 2017.6</span>
+				<span class="school">青岛大学</span>
+				<span class="specialty" style="margin-left:7em">软件工程专业</span>
+			</p>
+
+			<h2 class="classify">校内经历:</h2>
+			<p class="content">
+				<span class="time">2014.5 —— 2016.6</span>
+				<span class="adress">青岛大学创新实验室</span>
+			</p>
+			<p class="content">
+				参与实验室训练，经常与老师同学讨论算法，多次参加蓝桥杯、ACM竞赛
+			</p>
+
+			<h2 class="classify">社会实践:</h2>
+			<p class="content">
+				<span class="time">2012.7 —— 2013.1</span>
+				<span class="adress">山东移动潍坊分公司</span>
+				<span class="job">业务经理</span>
+			</p>
+			<ul class="list">
+				<li class="parent-list">
+					<h3 class="parent-list-title">工作</h3>
+					<ol>
+						<li class="child-list">手机业务办理与推广</li>
+						<li class="child-list">WLAN业务开通与安装</li>
+					</ol>
+				</li>
+				<li class="parent-list">
+					<h3 class="parent-list-title">收获</h3>
+					<ol class="">
+						<li class="child-list">熟悉掌握了移动公司的业务逻辑与业务需求，为以后的合作打下基础。</li>
+						<li class="child-list">锻炼了动手能力，提高了工作的忍耐能力，培养了时间管理能力。</li>
+					</ol>
+				</li>
+			</ul>
+
+			<h2 class="classify">荣誉奖励:</h2>
+			<ul class="list">
+				<li class="parent-list">
+					<h3 class="parent-list-title">国家级</h3>
+					<ol>
+						<li class="child-list">蓝桥杯全国软件和信息技术人才大赛全国总决赛JAVA组二等奖</li>
+						<li class="child-list">蓝桥杯全国软件和信息技术人才大赛全国总决赛C/C++组三等奖</li>
+					</ol>
+				</li>
+				<li class="parent-list">
+					<h3 class="parent-list-title">省级</h3>
+					<ol>
+						<li class="child-list">蓝桥杯全国软件和信息技术人才大赛山东省赛区JAVA组一等奖</li>
+						<li class="child-list">蓝桥杯全国软件和信息技术人才大赛山东省赛区C/C++组一等奖</li>
+					</ol>
+				</li>
+				<li class="parent-list">
+					<h3 class="parent-list-title">校级</h3>
+					<ol class="">
+						<li class="child-list">多次获得学院奖学金</li>
+						<li class="child-list">多次获得学校创新奖学金</li>
+					</ol>
+				</li>
+			</ul>
+
+			<h2 class="classify">个人技能:</h2>
+			<ul class="list">
+				<li class="parent-list">
+					<h3 class="parent-list-title">软件技能</h3>
+					<ol>
+						<li class="child-list">熟练使用各种office办公软件，精通PS、AI、CAD等多种制图软件，精通绘声绘影等多种视频处理软件，精通多种IDE的使用与调试，精通各种游戏软件、多款游戏排名服务器前列。</li>
+					</ol>
+				</li>
+				<li class="parent-list">
+					<h3 class="parent-list-title">专业技能</h3>
+					<ol class="">
+						<li class="child-list">精通C/C++、Java、C#、Python、JavaScript、Objective-C、汇编等多门编程语言，精通MySQL、MS SQL Server 等数据库编程，精通HTML、CSS、JS前端设计，精通Java EE、ASP.NET
+							MVC企业级开发，精通多种算法及数据结构，精通各种设计模式，精通UML建模工具，并有极强的自学能力，能在短期内学会新的编程语言。
+						</li>
+					</ol>
+				</li>
+			</ul>
+
+			<h2 class="classify">自我评价:</h2>
+			<p class="content" style="text-indent:2em; padding-bottom:50px;">
+				性格积极乐观，待人友好，具有沟通能力和抗压能力，能够吃苦耐劳。对待工作认真热情，有责任心且有较强的学习能力，经常参加大学生志愿者活动，具有社会服务意识，生活勤俭节约。
+			</p>
+		</div>
+	</div>
+
+	<footer>
+		<hr />
+		<p style="text-align:center;margin-top:20px;">版权所有，保留一切权利</p>
+		<p style="text-align:center;margin-top:10px;margin-bottom:30px;">2016 &copy; 田永先</p>
+	</footer>
+</body>
+
+</html>

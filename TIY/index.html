@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Do It Yourself</title>
+    <meta charset="utf-8" />
+    <link href="../css/public.css" rel="stylesheet" />
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/TIY/TIY.css" rel="stylesheet" />
+    <style>
+        .body {
+            /* 设置界面 全灰色 */
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            filter: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\"/></filter></svg>#grayscale");
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+            filter: gray;
+
+            /* 设置透明度 */
+            /* opacity:0.4; */
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo"></h1>
+            <ul class="toplist">
+                <li class="toplinks fl"><a href="../index.html">官网首页</a></li>
+                <li class="toplinks fl"><a href="http://localhost:3310/TIY/index.html">实用工具</a></li>
+                <li class="toplinks fl">商城/合作</li>
+                <li class="toplinks fl">用户互动</li>
+                <li class="toplinks fl">赛事中心</li>
+                <li class="toplinks fl">自助服务</li>
+                <li class="toplinks fl">个人中心</li>
+            </ul>
+        </nav>
+        <div class="linkbox">
+            <div class="linkset">
+                <ul class="linklist fl">
+                    <li><a href="#editor-box">在线测试工具</a></li>
+                </ul>
+                <ul class="linklist fl">
+                    <li>点券充值</li>
+                    <li>道聚城</li>
+                    <li>LOL信用卡</li>
+                    <li>网吧特权</li>
+                </ul>
+                <ul class="linklist fl">
+                    <li>在线客服</li>
+                    <li>活动中心</li>
+                    <li>官方论坛</li>
+                    <li>官方微信</li>
+                    <li>官方微博</li>
+                </ul>
+                <ul class="linklist fl">
+                    <li>LPL职业联赛</li>
+                    <li>甲级职业联赛</li>
+                    <li>德玛西亚杯</li>
+                    <li>城市英雄争霸赛</li>
+                    <li>高校联赛</li>
+                    <li>王者峡谷</li>
+                </ul>
+                <ul class="linklist fl">
+                    <li>封号查询</li>
+                    <li>体验服申请</li>
+                    <li>服务器状态查询</li>
+                    <li>裁决之镰</li>
+                </ul>
+                <ul class="linklist fl">
+                    <li>个人资料</li>
+                    <li>我的英雄与皮肤</li>
+                    <li>战绩历史</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="xxx">
+            <h1 id="title" class="title">田永先华丽丽的个人简历</h1>
+            <p class="subheading">阳光帅气的少年，怀着对编程的强烈兴趣，向我们展示自己的个人履历。</p>
+            <a class="toplink" href="../about.html">查看详情</a>
+        </div>
+    </div>
+
+    <div id="editor-box" class="editor-box">
+        <button id="horizontal" class="editor-button fl" type="button" onclick="horizontal_Click()">水平布局</button>
+        <button id="verticle" class="editor-button fl" type="button" onclick="verticle_Click()">垂直布局</button>
+        <button id="run" onclick="run_Click()" class="editor-button" type="button">运行</button>
+        <div class="editor-box">
+            <textarea id="text" class="editor editor-horizontal fl" spellcheck="false">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        *{
+            margin:0;
+            padding:0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;
+        Hello world!
+    &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+            <iframe id="result-iframe" class="result-iframe result-iframe-horizontal" src="test.html"></iframe>
+        </div>
+    </div>
+
+
+    <footer>
+        <hr />
+        <p style="text-align:center;margin-top:20px;">版权所有，保留一切权利</p>
+        <p style="text-align:center;margin-top:10px;margin-bottom:30px;">2016 &copy; 田永先</p>
+    </footer>
+
+
+    <!-- javascript 脚本 -->
+    <script src="../js/jquery-1.8.0.js"></script>
+    <script src="js/public.js"></script>
+    <script>
+        function horizontal_Click() {
+            var text = document.getElementById("text");
+            var iframe = document.getElementById('result-iframe');
+            text.className = "editor editor-horizontal fl";
+            iframe.className = "result-iframe result-iframe-horizontal";
+        }
+        function verticle_Click() {
+            var text = document.getElementById("text");
+            var iframe = document.getElementById('result-iframe');
+            text.className = "editor editor-verticle";
+            iframe.className = "result-iframe result-iframe-verticle";
+        }
+        function run_Click() {
+            //获取编辑器中的文本
+            var text = document.getElementById("text").value;
+            
+            //删除掉样式内容，并保存到src中
+            var src = text;
+
+            //从 src 得到 head 的内容
+            var headInnerHtml = "";
+
+            var headBeginIndex = src.indexOf("<head>") + 6;
+            var headEndIndex = src.indexOf("</head>");
+            if (headBeginIndex > 0 && headEndIndex > 0)
+                headInnerHtml = src.substring(headBeginIndex, headEndIndex);
+
+            //从 src 得到 body 的内容
+            var bodyInnerHtml = "";
+
+            var bodyBeginIndex = src.indexOf("<body>") + 6;
+            var bodyEndIndex = src.indexOf("</body>");
+            if (bodyBeginIndex > 0 && bodyEndIndex > 0)
+                bodyInnerHtml = src.substring(bodyBeginIndex, bodyEndIndex);
+
+            //将 head 和 body 的内容设置到 result-iframe 中
+            var iframe = document.getElementById('result-iframe').contentWindow.document;
+            iframe.head.innerHTML = headInnerHtml;
+            iframe.body.innerHTML = bodyInnerHtml;
+        };
+    </script>
+</body>
+</html>
