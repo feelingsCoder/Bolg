@@ -68,13 +68,6 @@
   <ItemGroup>
     <Content Include="css\TIY\TIY.css" />
     <Content Include="packages.config" />
-    <Content Include="font\MSYH.TTF" />
-    <Content Include="font\MSYHBD.TTF" />
-    <Content Include="font\SIMFANG.TTF" />
-    <Content Include="font\SIMYOU.TTF" />
-    <Content Include="font\STCAIYUN.TTF" />
-    <Content Include="font\STXINGKA.TTF" />
-    <Content Include="font\MRIAMC.TTF" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -98,6 +91,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="font\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
