@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -68,6 +69,13 @@
   <ItemGroup>
     <Content Include="css\TIY\TIY.css" />
     <Content Include="packages.config" />
+    <Content Include="font\MRIAMC.TTF" />
+    <Content Include="font\MSYH.TTF" />
+    <Content Include="font\MSYHBD.TTF" />
+    <Content Include="font\SIMFANG.TTF" />
+    <Content Include="font\SIMYOU.TTF" />
+    <Content Include="font\STCAIYUN.TTF" />
+    <Content Include="font\STXINGKA.TTF" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,7 +88,8 @@
     <Content Include="css\index.css" />
     <Content Include="css\public.css" />
     <Content Include="TIY\index.html" />
-    <Content Include="TIY\test.html" />
+    <Content Include="TIY\result.html" />
+    <Content Include="TIY\source.html" />
     <Content Include="image\banner.jpg" />
     <Content Include="image\photo.jpg" />
     <Content Include="image\public-spr.png" />
@@ -92,9 +101,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="font\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

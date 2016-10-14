@@ -28,12 +28,14 @@
 
 .editor {
     border: 1px solid #138379;
-    line-height: 26px;
-    font-size: 20px;
+    line-height: 22px;
+    font-size: 18px;
     font-family: tt;
     padding: 10px;
     height: 480px;
     max-height: 480px;
+    background-color: #1e1e1e;
+    color: white;
 }
 
 .editor-horizontal {
@@ -66,4 +68,20 @@
     width: 1198px;
     margin-left: 0px;
     margin-top:16px;
+}
+
+.editor-format-element{
+    color:#386ba4;
+}
+
+.editor-format-separator{
+    color:#a5a5a5;
+}
+
+.editor-format-property{
+    color:#9cdcfe;
+}
+
+.editor-format-s{
+
 }

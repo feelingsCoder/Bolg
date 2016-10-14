@@ -17,7 +17,6 @@
             filter: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\"/></filter></svg>#grayscale");
             filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
             filter: gray;
-
             /* 设置透明度 */
             /* opacity:0.4; */
             
@@ -91,39 +90,10 @@
         <button id="verticle" class="editor-button fl" type="button" onclick="verticle_Click()">垂直布局</button>
         <button id="run" onclick="run_Click()" class="editor-button" type="button" accesskey="s">运行</button>
         <div class="editor-box">
-            <textarea id="text" class="editor editor-horizontal fl" spellcheck="false">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;style&gt;
-        *{
-            margin:0;
-            padding:0;
-        }
-        h1{
-            margin: 10px;
-            font-size: 22px;
-        }
-        p{
-            margin: 20px;
-            font-size:16px;
-            text-indent:2em;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;
-        欢迎使用在线测试程序
-    &lt;/h1&gt;
-    &lt;p&gt;
-        这是一款开源免费的在线测试程序。我们真诚的邀请您在使用的同时留下您宝贵的意见跟建议。你的支持就是我们前进的无限动力。
-    &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</textarea>
-            <iframe id="result-iframe" class="result-iframe result-iframe-horizontal" src="test.html"></iframe>
+            <iframe id="text" class="editor editor-horizontal fl" spellcheck="false" contenteditable="true" src="source.html"></iframe>
+            <iframe id="result-iframe" class="result-iframe result-iframe-horizontal" src="result.html"></iframe>
         </div>
     </div>
-
 
     <footer>
         <hr />
@@ -134,7 +104,7 @@
 
     <!-- javascript 脚本 -->
     <script src="../js/jquery-1.8.0.js"></script>
-    <script src="js/public.js"></script>
+    <script src="../js/public.js"></script>
     <script>
         function horizontal_Click() {
             var text = document.getElementById("text");
@@ -142,15 +112,17 @@
             text.className = "editor editor-horizontal fl";
             iframe.className = "result-iframe result-iframe-horizontal";
         }
+
         function verticle_Click() {
             var text = document.getElementById("text");
             var iframe = document.getElementById('result-iframe');
             text.className = "editor editor-verticle";
             iframe.className = "result-iframe result-iframe-verticle";
         }
+
         function run_Click() {
             //获取编辑器中的文本
-            var text = document.getElementById("text").value;
+            var text = document.getElementById("text").contentWindow.document.body.innerText;
             
             //删除掉样式内容，并保存到src中
             var src = text;
@@ -175,7 +147,33 @@
             var iframe = document.getElementById('result-iframe').contentWindow.document;
             iframe.head.innerHTML = headInnerHtml;
             iframe.body.innerHTML = bodyInnerHtml;
+
+            format(text);
         };
+
+        function format(text) {
+            var temp = text;
+            //匹配所有html元素
+            var elements = temp.match(/<.*>/g);
+
+            var str = "";
+            for (index in elements)
+                str += elements[index] + "\n";
+            alert(str);
+
+            for (index in elements) {
+                temp.replace("<.*>/g", "<span name='editor-format-element' class='editor-format-element'>" + elements[index] + "</span>");
+            }
+            alert(temp);
+
+            ////匹配所有元素的属性名
+            //var properties = text.match(/(?:<.*>).*(?=<.*>)/g);
+            ////(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,16}/
+            //var str = "";
+            //for (index in properties)
+            //    str += properties[index] + "\n";
+            //alert(str);
+        }
     </script>
 </body>
 </html>
